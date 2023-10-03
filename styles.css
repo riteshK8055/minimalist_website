@@ -14,6 +14,7 @@ html,body{
 body{
 
    font-family: "poppins" , sans-serif;
+   overflow-x: hidden;
 }
 
 :root {
@@ -54,11 +55,29 @@ nav{
 nav svg{
 
     cursor: pointer;
+    z-index: 10;
 }
 
 .links{
 
-    display: none;
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+
+}
+
+.links a{
+
+    color: var(--secondary-color);
+    font-size: 2rem;
 }
 
 .logo{
@@ -186,3 +205,24 @@ nav svg{
     width: 100%;
     margin-top:2.5rem ;
 }
+
+@media screen and (min-width: 768px) {
+    body {
+      padding: 0% 10%;
+    }
+    .videos {
+      display: flex;
+      gap: 2rem;
+    }
+    .about {
+      display: flex;
+      gap: 5rem;
+      justify-content: space-between;
+    }
+    .about img {
+      width: 50%;
+    }
+    .about h2 {
+      text-align: start;
+    }
+  }
